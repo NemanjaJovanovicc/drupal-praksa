@@ -1,0 +1,7 @@
+movie_reservation.movieReservation:
+  path: '/movie-reservation'
+  defaults:
+    _controller: '\Drupal\movie_reservation\Controller\MovieReservationController::movieReservation'
+    _title: 'Movie Reservation'
+  requirements:
+    _permission: 'access content'
