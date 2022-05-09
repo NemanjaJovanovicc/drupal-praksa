@@ -5,3 +5,11 @@ movie_reservation.movieReservation:
     _title: 'Movie Reservation'
   requirements:
     _permission: 'access content'
+
+movie_reservation.information:
+  path: '/information'
+  defaults:
+    _controller: '\Drupal\movie_reservation\Controller\MovieReservationController::information'
+    _title: ''
+  requirements:
+    _permission: 'access content'

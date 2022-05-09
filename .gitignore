@@ -6,6 +6,8 @@
 /themes/contrib/
 /profiles/contrib/
 /libraries/
+/modules/admin_toolbar/
+/modules/twig_xdebug/
 
 # Ignore sensitive information
 /sites/*/settings.php
