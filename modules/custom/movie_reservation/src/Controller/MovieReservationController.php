@@ -26,26 +26,27 @@ class MovieReservationController extends ControllerBase{
     }
 }
 */
-class MovieReservationController {
+class MovieReservationController{
 
-    public function showAllMovies()
+    public function movieReservation()
     {
         $movies = [
             ['title' => 'Movie1'],
             ['title' => 'Movie2'],
+            ['title' => 'Movie3'],
         ];
 
         return [
-            '#theme' => 'movie-reservation',
+            '#theme' => 'information-movie',
             '#movies' => $movies,
             '#title' => 'Movies'
         ];
-        $query = \Drupal::entityQuery('node_field_data')
+        $query = \Drupal::entityQuery('node')
           ->condition('type', 'article');
         $movies = \Drupal\node\Entity\Node::loadMultiple($query->execute());
 
         return array(
-            '#theme' => 'movie-reservation',
+            '#theme' => 'information-movie',
             '#movies' => $movies,
             '#title' => 'Welcome to Movie Reservation Page'
         );

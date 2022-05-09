@@ -1,8 +1,3 @@
-<!--
-<h1>{{items.name}}</h1>
-<h1>{{items.description}}</h1>
--->
-
 <h1> All movies </h1>
 <ol>
 <h1> List of movies </h1>
@@ -11,9 +6,9 @@
         <li>
             {{movie.title}}
             <div>
-                <h5> {{movie.node_field_data_title.value | raw}} </h5>
-                {{movie.node_field_data_description.value | raw}}
-                <img src="{{ file_url(movie.node_field_data_image.entity.fileuri) }}" width="300" height="300" />
+                <h5> {{movie.field_movie_title.value | raw}} </h5>
+                {{movie.field_movie_description.value | raw}}
+                <img src="{{ file_url(movie.field_movie_image.entity.fileuri) }}" width="300" height="300" />
             </div>
         </li>
     {% endfor %}
