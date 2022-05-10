@@ -2,59 +2,22 @@
 
 namespace Drupal\movie_reservation\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
-/*
-class MovieReservationController extends ControllerBase{
-    public function movieReservation(){
-        return [
-            '#title' => 'Movie Reservation',
-            '#markup' => '<h3>Welcome to Movie Reservation Page</h3>'
-        ];
-    }
-
-    public function information(){
-        $data = array(
-            'name'=>'Ime filma',
-            'description'=>'Opis filma'
-        );
-
-        return [
-            '#title'=>'Information Page, Movie Reservation',
-            '#theme'=>'information_movie',
-            '#items'=>$data
-        ];
-    }
-}
-*/
 class MovieReservationController{
 
-    public function movieReservation()
-    {
-        $movies = [
-            ['title' => 'Movie1'],
-            ['title' => 'Movie2'],
-            ['title' => 'Movie3'],
-        ];
+    public function movieReservation() {
+   
+      $query = \Drupal::entityQuery('node')
+        //->condition('type', 4);
+        ->condition('type','movie');
+      $movies = \Drupal\node\Entity\Node::loadMultiple($query->execute());
 
-        return [
-            '#theme' => 'information-movie',
-            '#movies' => $movies,
-            '#title' => 'Movies'
-        ];
-        $query = \Drupal::entityQuery('node')
-          ->condition('type', 'article');
-        $movies = \Drupal\node\Entity\Node::loadMultiple($query->execute());
-
-        return array(
-            '#theme' => 'information-movie',
-            '#movies' => $movies,
-            '#title' => 'Welcome to Movie Reservation Page'
+      $c = 2;
+       return array(
+          '#theme' => 'information-movie',
+          '#movies' => $movies,
+          '#title' => 'Welcome to our movie reservation page'
         );
+
     }
-}
-
-
-
-
-
+  }
 ?>

@@ -1,9 +1,0 @@
-<?php
-
-    function movie_reservation_theme($existing, $type, $theme, $path){
-        return [
-            'information-movie'=> [
-                'variables'=> ['movies' => [], 'title' => ''],
-            ],
-        ];
-    }
