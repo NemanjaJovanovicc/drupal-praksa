@@ -2,14 +2,19 @@
 
 namespace Drupal\movie_reservation\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
+class MovieReservationController{
 
-class MovieReservationController extends ControllerBase{
-    public function movieReservation(){
-        return [
-            '#title' => 'Movie Reservation',
-            '#markup' => '<h3>Welcome to Movie Reservation Page</h3>'
-        ];
+    public function movieReservation() {
+   
+      $query = \Drupal::entityQuery('node')
+        ->condition('type','movie');
+      $movies = \Drupal\node\Entity\Node::loadMultiple($query->execute());
+
+       return array(
+          '#theme' => 'information-movie',
+          '#movies' => $movies,
+          '#title' => 'Welcome to our movie reservation page'
+        );
     }
-}
+  }
 ?>

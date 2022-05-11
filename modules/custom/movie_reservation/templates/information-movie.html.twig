@@ -1,0 +1,12 @@
+<h1> List of movies </h1>
+  <ol>
+    {% for movie in movies %}
+        <li>
+            <div>
+               <h5> {{movie.title.value | raw}}  </h5>
+                    {{movie.field_description.value | raw}}
+                    <img src="{{ file_url(movie.field_slika.entity.fileuri) }}" width="300" height="300" />
+            </div>
+        </li>
+    {% endfor %}
+</ol>
