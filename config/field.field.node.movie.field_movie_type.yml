@@ -1,0 +1,29 @@
+uuid: e98c458e-fafb-4628-b6b6-77451407272a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movie_type
+    - node.type.movie
+    - taxonomy.vocabulary.movie
+id: node.movie.field_movie_type
+field_name: field_movie_type
+entity_type: node
+bundle: movie
+label: 'Movie type'
+description: 'Enter genres that site visitors might want to search for.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      movie: movie
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
