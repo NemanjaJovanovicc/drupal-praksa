@@ -1,12 +1,30 @@
-<h1> List of movies </h1>
-  <ol>
-    {% for movie in movies %}
-        <li>
-            <div>
-               <h5> {{movie.title.value | raw}}  </h5>
-                    {{movie.field_description.value | raw}}
+{{ attach_library('movie_reservation/movie_reservation') }} 
+<head> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h1> List of movies </h1>
+    <h5>Please select movie genre for which you would like to make a reservation </h5>
+    <select  id="genre" name ="genre">
+        <option value="">---Choose a Genre---</option>
+        {% for genre in genres %}
+        <option value="{{genre.tid.value}}"> {{genre.name.value}}</option>
+        {% endfor %}
+        </option> 
+    </select> 
+    <ol>
+    {% if movies is not empty  %}
+        {% for movie in movies %}
+            <li>
+                <div>
+                <h5> {{movie.title.value | raw}}  </h5>
+                    {{movie.field_description.value | raw}} 
                     <img src="{{ file_url(movie.field_slika.entity.fileuri) }}" width="300" height="300" />
-            </div>
-        </li>
-    {% endfor %}
-</ol>
+                </div>
+            </li>
+        {% endfor %}
+    {% else %}
+        <h4>Sorry, we do not have movies with selected genre yet! </h4>
+    {% endif %}
+    </ol> 
+</body>
