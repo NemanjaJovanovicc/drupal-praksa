@@ -5,12 +5,11 @@
 <body>
     <h1> List of movies </h1>
     <h5>Please select movie genre for which you would like to make a reservation </h5>
-    <select  id="genre" name ="genre">
+    <select id="genre" name="genre">
         <option value="">---Choose a Genre---</option>
         {% for genre in genres %}
-        <option value="{{genre.tid.value}}"> {{genre.name.value}}</option>
+        <option value="{{genre.tid.value}}"> {{genre.name.value}} </option>
         {% endfor %}
-        </option> 
     </select> 
     <ol>
     {% if movies is not empty  %}
