@@ -35,7 +35,7 @@ versions in sites/all/modules will take precedence over versions of the same
 module that are here. Alternatively, the sites/your_site_name/modules directory
 pattern may be used to restrict modules to a specific site instance.
 
-MORE INFORMATION
+MORE INFORMATION 
 ----------------
 
 Refer to the “Developing for Drupal” section of the README.txt in the Drupal
