@@ -8,8 +8,9 @@
 /libraries/
 /modules/admin_toolbar/
 /modules/twig_xdebug/
+/node_modules/
 
-# Ignore sensitive information
+# Ignore sensitive information 
 /sites/*/settings.php
 /sites/*/settings.local.php
 

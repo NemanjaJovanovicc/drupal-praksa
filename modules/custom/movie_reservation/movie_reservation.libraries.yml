@@ -1,0 +1,6 @@
+movie_reservation:
+  version: 1.0
+  js:
+    js/movie_reservation.js: {}
+  dependencies:
+    - core/jquery

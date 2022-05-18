@@ -1,6 +1,5 @@
 Modules extend your site functionality beyond Drupal core.
 
-
 WHAT TO PLACE IN THIS DIRECTORY?
 --------------------------------
 =======
@@ -12,7 +11,7 @@ custom modules from Drupal core's modules. This allows Drupal core to be updated
 without overwriting these files.
 
 DOWNLOAD ADDITIONAL MODULES
----------------------------
+----------------------------
 
 Contributed modules from the Drupal community may be downloaded at
 https://www.drupal.org/project/project_module.
@@ -39,8 +38,8 @@ versions in sites/all/modules will take precedence over versions of the same
 module that are here. Alternatively, the sites/your_site_name/modules directory
 pattern may be used to restrict modules to a specific site instance.
 
-MORE INFORMATION
-----------------
+MORE INFORMATION 
+-----------------
 
 Refer to the “Developing for Drupal” section of the README.txt in the Drupal
 root directory for further information on extending Drupal with custom modules.
