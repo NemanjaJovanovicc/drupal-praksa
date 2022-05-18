@@ -6,4 +6,3 @@ movie_reservation.movieReservation:
   requirements:
     _permission: 'access content'
   methods: [GET]
-  
