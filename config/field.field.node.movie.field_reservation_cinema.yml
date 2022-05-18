@@ -1,0 +1,29 @@
+uuid: 062b7eed-798a-4e43-942b-73699a84f218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reservation_cinema
+    - node.type.movie
+    - taxonomy.vocabulary.reservation_cinema
+id: node.movie.field_reservation_cinema
+field_name: field_reservation_cinema
+entity_type: node
+bundle: movie
+label: reservation_cinema
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      reservation_cinema: reservation_cinema
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

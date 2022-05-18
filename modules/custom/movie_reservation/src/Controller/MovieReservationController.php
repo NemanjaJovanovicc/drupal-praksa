@@ -11,11 +11,16 @@ use Symfony\Component\HttpFoundation\Request;
       $genres = \Drupal::entityTypeManager()
         ->getStorage('taxonomy_term')
         ->loadByProperties(['vid' => 'genres']);
+
+      $reservation_cinema = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties(['vid' => 'reservation_cinema']);
+
       $genre_id = \Drupal::request()->query->get('genre');
 
       $query = \Drupal::entityQuery('node')
         ->condition('type', 'movie');
-      
+
       if(isset($genre_id)){
         $query->condition('field_genre', $genre_id);
       }
@@ -26,7 +31,8 @@ use Symfony\Component\HttpFoundation\Request;
           '#theme' => 'information-movie',
           '#movies' => $movies,
           '#title' => 'Welcome to our movie reservation page',
-          '#genres' => $genres
+          '#genres' => $genres,
+          '#reservation_cinema' => $reservation_cinema
       );
     }
   }

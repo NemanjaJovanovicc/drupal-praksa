@@ -19,11 +19,20 @@
                 <h5> {{movie.title.value | raw}}  </h5>
                     {{movie.field_description.value | raw}} 
                     <img src="{{ file_url(movie.field_slika.entity.fileuri) }}" width="300" height="300" />
+                    <ul>
+                        {% for reservation_cine in reservation_cinema %}  
+                            <li>
+                                <div>
+                                    <h5> {{reservation_cine.name.value}} </h5>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </li>
         {% endfor %}
     {% else %}
         <h4>Sorry, we do not have movies with selected genre yet! </h4>
     {% endif %}
-    </ol> 
+    </ol>
 </body>
