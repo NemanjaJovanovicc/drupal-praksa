@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.movie.field_description
     - field.field.node.movie.field_genre
     - field.field.node.movie.field_reservation_cinema
+    - field.field.node.movie.field_movie_type
     - field.field.node.movie.field_slika
     - node.type.movie
   module:
@@ -33,6 +34,7 @@ content:
     weight: 102
     region: content
   field_genre:
+  field_movie_type:
     type: entity_reference_label
     label: above
     settings:
@@ -47,6 +49,7 @@ content:
       link: true
     third_party_settings: {  }
     weight: 106
+    weight: 103
     region: content
   field_slika:
     type: image

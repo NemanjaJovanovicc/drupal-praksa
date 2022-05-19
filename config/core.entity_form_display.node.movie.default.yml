@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.movie.field_description
     - field.field.node.movie.field_genre
     - field.field.node.movie.field_reservation_cinema
+    - field.field.node.movie.field_movie_type
     - field.field.node.movie.field_slika
     - image.style.thumbnail
     - node.type.movie
@@ -56,6 +57,9 @@ content:
   field_reservation_cinema:
     type: entity_reference_autocomplete
     weight: 126
+  field_movie_type:
+    type: entity_reference_autocomplete
+    weight: 123
     region: content
     settings:
       match_operator: CONTAINS
