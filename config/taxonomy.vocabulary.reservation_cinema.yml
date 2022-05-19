@@ -1,0 +1,8 @@
+uuid: 61e889a8-defe-46ae-b2f8-b8b6e6320fa1
+langcode: en
+status: true
+dependencies: {  }
+name: reservation_cinema
+vid: reservation_cinema
+description: 'This is page for reservation movie in cinema!'
+weight: 0

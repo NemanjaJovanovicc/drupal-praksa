@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.movie.body
     - field.field.node.movie.field_description
+    - field.field.node.movie.field_genre
+    - field.field.node.movie.field_reservation_cinema
     - field.field.node.movie.field_movie_type
     - field.field.node.movie.field_slika
     - image.style.thumbnail
@@ -42,6 +44,19 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_genre:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_reservation_cinema:
+    type: entity_reference_autocomplete
+    weight: 126
   field_movie_type:
     type: entity_reference_autocomplete
     weight: 123

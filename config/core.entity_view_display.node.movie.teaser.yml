@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.movie.body
     - field.field.node.movie.field_description
+    - field.field.node.movie.field_genre
+    - field.field.node.movie.field_reservation_cinema
     - field.field.node.movie.field_movie_type
     - field.field.node.movie.field_slika
     - node.type.movie
@@ -32,5 +34,7 @@ content:
     region: content
 hidden:
   field_description: true
+  field_genre: true
+  field_reservation_cinema: true
   field_movie_type: true
   field_slika: true
